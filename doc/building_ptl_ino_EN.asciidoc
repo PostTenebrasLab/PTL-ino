@@ -131,7 +131,7 @@ image:img/step4a.standard.jpg[link="img/step4a.medium.jpg"]
 
 * Put 'C3' in place. 'C3' is the 220nF with 224 written on it. Polarity is not important for this component.
 * Put 'C2', 'C4', 'C5', 'C6' and 'C7'. These are all the same, and are 100nF with 104 written on it. Polarity is not important for these components.
-* 'C9' is the tantalum capacitor, and **the polarity IS important**. You have to match the side with the plus sign on the capacitor, with the plus sign on the PCB.
+* 'C9' is the tantalum capacitor, and **the polarity IS important**. You have to match the side with the '+' sign on the capacitor, with the '+' sign on the PCB.
 
 WARNING: Tantalum capacitor will explode if the polarity is incorrect. Please double check.
 
