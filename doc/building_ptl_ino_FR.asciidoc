@@ -1,0 +1,230 @@
+//vim: set syntax=asciidoc:
+//
+//Generate HTML output with TOC on right side
+//asciidoc --backend html5 -a max-width=57em -a toc2 -a toc-title="List of steps" -a numbered building_ptl_ino_FR.asciidoc
+//
+//Generate HTML slides (slidy backedn)
+//asciidoc --backend slidy -a max-width=57em -a toc2 -a toc-title="List of steps" -a numbered building_ptl_ino_FR.asciidoc
+//
+
+// 
+//**********************************************************************
+//Work in progress PTL-ino doc using Ascidoc
+//**********************************************************************
+//
+
+:Author:    Post Tenebras Lab
+:Date:      2015-11
+:Revision:  1.0
+:Language:  French
+:website:   http://ptl-ino.com/
+
+Comment assembler la PTL-ino 
+============================
+
+image:img/step0a.standard.jpg[link="img/step0a.medium.jpg"]
+
+.Liste des outils nécessaires
+
+  * Fer à Souder 
+  * Fil de soudure 
+  * Pince coupante
+  * Multimètre
+
+.Liste des composants
+
+Tous les composants ci-dessous sont inclus dans le kit PTL-ino.
+
+.Condensateur
+[options="header",width="70%",cols="^1,^5m,^3e"]
+|=======================
+| Qty |Name |Label
+| 5x |100nF ceramic | C2, C4, C5, C6, C7
+| 5x |220nF tantal | C3
+| 1x |10uF ceramic | C1, C8
+| 2x |10uF Felectrolytic | C9
+|=======================
+
+.Resistance
+[options="header",width="70%",cols="^1,^5m,^3e"]
+|=======================
+| Qty |Name |Label
+| 2x |4.7kΩ | R2, R3
+| 1x |220Ω | R1
+|=======================
+
+.Semiconducteurs
+[options="header",width="70%",cols="^1,^5m,^3e"]
+|=======================
+| Qty |Name |Label
+| 1x |LED, 5mm (any colour) | D1
+| 1x |LM7805 | U3
+| 1x |MCP1700 | U4 
+| 1x |PIC 16F1455 | U1
+| 1x |AVR ATmega328P | U2
+|=======================
+
+.Mécanique
+[options="header",width="70%",cols="^1,^5m,^3e"]
+|=======================
+| Qty |Name |Label
+| 2x |1x8 2.54mm female connector | P1, P4
+| 1x |1x6 2.54mm female connector | P2
+| 1x |1x10 2.54mm female connector | P3
+| 1x |2x3 2.54mm male connector | P5
+| 2x |1x6 2.54mm male connector | P6, P7
+| 1x |2x7 2.54 IC socket, DIL-14 | U1
+| 1x |2x14 2.54mm IC socket, DIL-28 | U2
+| 1x |USB mini female connector | P8
+| 1x |push-button | SW1
+| 1x |PCB | - 
+| 1x |mini-USB cable | -
+|=======================
+
+== Préparez vos composants et alignez les ==
+
+* Vérifiez que votre kit est complet et corresponde à la liste des composants indiqués
+* Organisez vos composants pour pouvoir facilement les retrouver
+
+image:img/step1a.standard.jpg[link="img/step1a.medium.jpg"]
+image:img/step1b.standard.jpg[link="img/step1b.medium.jpg"]
+
+== Installer les résistances ==
+
+* Commencez avec la résistance 'R1'. C'est celle avec les couleurs rouge-rouge-marron-doré. L'orientation n'est pas importante pour ce composant.
+* Placez 'R2' et 'R3' à leurs places respectives, elles ont les couleurs jaune-violet-rouge-doré. L'orientation n'est pas non plus importante pour ces composant.
+* Tourner le PCB et soudez les 3 résistances en place.
+* Une fois terminé avec la soudure, coupez le surplus des pattes(fil) des résistances.
+
+TIP: Afin de garder les composants en place quand vous tournez le PCB, vous pouvez plier les pattes à 45 degrés.
+
+TIP: Quand vous coupez le surplus de fil, portez des lunettes de protection ou tenez le bout de fil avec les mains.
+
+image:img/step2a.standard.jpg[link="img/step2a.medium.jpg"]
+image:img/step2b.standard.jpg[link="img/step2b.medium.jpg"]
+image:img/step2c.standard.jpg[link="img/step2c.medium.jpg"]
+
+== Installer les supports IC ==
+
+* Placer les 2 socles pour CI ('U1', 'U2'). Ils ont un encoche, qui doit être du même côté que le marquage sur le PCB.
+* Tournez le PCB et faites la soudure. Vous pouvez utiliser un ruban adhésif pour les garder en place.
+* Il n'y a pas besoin de couper les pattes du support après la soudure car ils ont déjà la bonne taille.
+
+image:img/step3a.standard.jpg[link="img/step3a.medium.jpg"]
+image:img/step3b.standard.jpg[link="img/step3b.medium.jpg"]
+image:img/step3c.standard.jpg[link="img/step3c.medium.jpg"]
+
+==  Bouton reset ==
+
+* Placez le bouton reset ('SW1').
+* Orientation of the switch does not matter.
+
+NOTE: Il faut forcer un peu pour installer le bouton, les pattes doivent être légèrement pliée. Il y aura toujours un espace entre le bouton et la surface du PCB.
+
+image:img/step4a.standard.jpg[link="img/step4a.medium.jpg"]
+
+==  Condensateurs  ==
+
+* Placez le condensateur 'C3' de 220nF (écrit 224 sur le composant). Il n'y a pas de polarité pour ce composant.
+* Placez 'C2', 'C4', 'C5', 'C6' et 'C7' de 100nF. Ils sont tous les mêmes avec 104 écrit dessus. Il n'y a pas de polarité pour ces composants.
+* 'C9' est le condensateur tantale, *la polarité EST importante*. Il faut aligner la signe '+' indiqué sur le composant avec la signe '+' indiqué sur le PCB.
+
+WARNING: Le condasateur tantale va exploser si la polarité n'est pas correcte. Verifier bien le sens.
+
+image:img/step5a.standard.jpg[link="img/step5a.medium.jpg"]
+image:img/step5b.standard.jpg[link="img/step5b.medium.jpg"]
+image:img/step5c.standard.jpg[link="img/step5c.medium.jpg"]
+
+==  Régulateur 5V ==
+
+* Placez le régulateur 5V ('U3') et alignez le trou avec le trou sur le PCB.
+* Faites la soudure et coupez les pattes(fil) en plus.
+
+image:img/step6a.standard.jpg[link="img/step6a.medium.jpg"]
+
+== Condensateurs électrolytiques ==
+
+* Placez les 2 condensateurs électrolytiques ('C1' et 'C8'). Pliez les de façon qu'ils soient à plat sur le PCB (voir photo)
+* Sur le PCB il y'a un marquage avec le signe '+' et sur le condensateurs il y'a un marquage avec le signe '-' (en blanc). Ces 2 signes doivent s'opposer quand vous placez les composants.
+
+image:img/step7a.standard.jpg[link="img/step7a.medium.jpg"]
+image:img/step7b.standard.jpg[link="img/step7b.medium.jpg"]
+
+== Régulateur 3.3V ==
+
+* Placez le régulateur 3.3V LM1700 ('U4'). La forme sur le PCB doit correspondre avec la forme du régulateur.
+* Il va falloir plier un tout petit peu la patte du milieu pour l'enfiler dans les trous du PCB.
+
+image:img/step8a.standard.jpg[link="img/step8a.medium.jpg"]
+
+== LED ==
+
+* Placez la LED ('D1'). *La patte longue doit aller sur le + indiqué sur la PCB.*
+
+image:img/step9a.standard.jpg[link="img/step9a.medium.jpg"]
+
+== Connecteurs mâles ==
+
+* Placez les connecteurs mâles 1x6 ('P7') et 2x3 ('P5'). Tournez le PCB et faites la soudure.
+* Du ruban adhésif peut être utilisé pour les garder en place pendant la soudure.
+
+NOTE: Voir l'image pour le placement correcte. Ces pièces n'ont pas d'orientation.
+
+image:img/step10a.standard.jpg[link="img/step10a.medium.jpg]
+
+== Connecteurs femelles ==
+
+* Placez les connecteurs femelles ('P1', 'P2', 'P3', 'P4'). Il faut faire seulement la soudure de la première et dernière patte.
+* Après les 2 soudures, il faut s'assurer que les connecteurs sont bien perpendiculaire au PCB. Sinon, il faut rechauffer une des soudure et pousser le connecteur d'un côté; puis refaire la même chose de l'autre côté.
+* Une fois que le connecteur est parfaitement perpendiculaire, vous pouvez continuer à souder les restes des pattes.
+
+image:img/step11a.standard.jpg[link="img/step11a.medium.jpg"]
+image:img/step11b.standard.jpg[link="img/step11b.medium.jpg"]
+
+== Micro-controlleurs ==
+
+* Pour placer les microcontrolleurs ('U1', 'U2') dans leur support, il faut plier les pattes afin qu'elles soient droites. Pour faire ça, vous pouvez le mettre sur la table sur le coté et appuyer gentiment pour plier toutes les pattes d'un coté en même temps.
+* Il faut bien placer les microcontrolleurs afin que le petit point sur l'IC corresponde avec le marquage sur le PCB et l'encoche du support.
+
+image:img/step12a.standard.jpg[link="img/step12a.medium.jpg"]
+
+== Visser le régulateur 5V ==
+
+* Mettez un vis et un écrou M3 pour fixer le régulateur 5V en place.
+* La vis est utilisée pour faciliter le contact thermique avec le PCB au cas ou le régulateur chauffe
+
+image:img/step13a.standard.jpg[link="img/step13a.medium.jpg"]
+
+== Connecteur mini-USB ==
+
+* Placez le connecteur mini-USB ('P8') et soudez les 2 (ou 4) pattes du blindage.
+* Puis soudez les 5 pins pour l'alimentation et données. Faite attention de ne pas faire des "ponts" puisque ces pattes sont très proches et petites.
+
+image:img/step14a.standard.jpg[link="img/step14a.medium.jpg"]
+
+== Configuration des jumpers/ponts ==
+
+* Sur le dos du PCB, il y'a un "jumper/cavalier" (le jumper est un composant qui permet de relier deux broches). 
+* Il faut faire une soudure sur 'JP1' entre le les 2 points selon le marquage indiqué sur la PCB (soit alimenté en USB soit alimenté avec l'entrée Vin)
+* Il faut également souder le 'JP3' pour activer le "auto-reset" qui permet de programmer la PTL-ino avec les outils Arduino
+
+image:img/step15a.standard.jpg[link="img/step15a.medium.jpg"]
+image:img/step15b.standard.jpg[link="img/step15b.medium.jpg"]
+image:img/step15c.standard.jpg[link="img/step15c.medium.jpg"]
+
+//== Note ==
+//
+//[qanda]
+//.Q&A
+//Question 1::
+//    Answer 1
+//
+//Question 2:: 
+//    Answer 2
+//
+//CPU:: The brain of the computer.
+//Hard drive:: Permanent storage for operating system and/or user files.
+//RAM:: Temporarily stores information the CPU uses during operation.
+//Keyboard:: Used to enter text or control items on the screen.
+//Mouse:: Used to point to and select items on your computer screen.
+//Monitor:: Displays information in visual form using text and graphics.

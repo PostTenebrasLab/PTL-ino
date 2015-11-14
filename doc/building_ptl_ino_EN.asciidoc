@@ -1,0 +1,234 @@
+//vim: set syntax=asciidoc:
+//
+//Generate HTML output with TOC on right side
+//asciidoc --backend html5 -a max-width=57em -a toc2 -a toc-title="List of steps" -a numbered building_ptl_ino_EN.asciidoc
+//
+//Generate HTML slides (slidy backedn)
+//asciidoc --backend slidy -a max-width=57em -a toc2 -a toc-title="List of steps" -a numbered building_ptl_ino_EN.asciidoc
+//
+
+// 
+//**********************************************************************
+//Work in progress PTL-ino doc using Ascidoc
+//**********************************************************************
+//
+
+:Author:    Post Tenebras Lab
+:Date:      2015-11
+:Revision:  1.0
+:Language:  English
+:website:   http://ptl-ino.com/
+
+How to build a PTL-ino board
+============================
+
+.About the PTL-ino
+
+The PTL-ino is an Arduino compatible board, made entirely out of through-hole components. It is a perfect project to learn how to solder and start getting into the world of micro controllers.
+
+image:img/step0a.standard.jpg[link="img/step0a.medium.jpg"]
+
+.List of tools needed
+
+  * Soldering iron
+  * Solder
+  * Wire cutter
+  * Multimeter
+
+.List of componants
+
+Everything listed bellow is included in the PTL-ino kit
+
+.Capactitors
+[options="header",width="70%",cols="^1,^5m,^3e"]
+|=======================
+| Qty |Name |Label
+| 5x |100nF ceramic | C2, C4, C5, C6, C7
+| 5x |220nF tantal | C3
+| 1x |10uF ceramic | C1, C8
+| 2x |10uF Felectrolytic | C9
+|=======================
+
+.Resistors
+[options="header",width="70%",cols="^1,^5m,^3e"]
+|=======================
+| Qty |Name |Label
+| 2x |4.7kΩ | R2, R3
+| 1x |220Ω | R1
+|=======================
+
+.Semiconductors
+[options="header",width="70%",cols="^1,^5m,^3e"]
+|=======================
+| Qty |Name |Label
+| 1x |LED, 5mm (any colour) | D1
+| 1x |LM7805 | U3
+| 1x |MCP1700 | U4 
+| 1x |PIC 16F1455 | U1
+| 1x |AVR ATmega328P | U2
+|=======================
+
+.Mechanical
+[options="header",width="70%",cols="^1,^5m,^3e"]
+|=======================
+| Qty |Name |Label
+| 2x |1x8 2.54mm female connector | P1, P4
+| 1x |1x6 2.54mm female connector | P2
+| 1x |1x10 2.54mm female connector | P3
+| 1x |2x3 2.54mm male connector | P5
+| 2x |1x6 2.54mm male connector | P6, P7
+| 1x |2x7 2.54 IC socket, DIL-14 | U1
+| 1x |2x14 2.54mm IC socket, DIL-28 | U2
+| 1x |USB mini female connector | P8
+| 1x |push-button | SW1
+| 1x |PCB | - 
+| 1x |mini-USB cable | -
+|=======================
+
+== Get all the components ready ==
+
+* Check that the kit contains all the components.
+* Arrange the components so you can easily find them.
+
+image:img/step1a.standard.jpg[link="img/step1a.medium.jpg"]
+image:img/step1b.standard.jpg[link="img/step1b.medium.jpg"]
+
+== Populate the resistors ==
+
+* Start with resistor 'R1'. It is the one with red-red-brown-gold rings. Orientation is not important.
+* Then 'R2' and 'R3'. They are the one with yellow-violet-red-gold rings and once again, the orientation is not important.
+* After placing the 3 resistors, turn the board over to solder them in place.
+* Then, cut off the extra bits of wire  sticking out of the PCB (shorten the "legs" of the resistors).
+
+TIP: To keep the components in place when you flip the board to do the soldering, you can bend the wires in 45 degrees.
+
+TIP: When cutting extra wires, make sure you either wear a protective goggle or that you hold the extra pice with your other hand.
+
+image:img/step2a.standard.jpg[link="img/step2a.medium.jpg"]
+image:img/step2b.standard.jpg[link="img/step2b.medium.jpg"]
+image:img/step2c.standard.jpg[link="img/step2c.medium.jpg"]
+
+== Populate the IC sockets ==
+
+* Populate the 2 IC sockets ('U1', 'U2'). They have a small notch, that should be on the same side as the small markings on the PCB.
+* Turn over the board and solder the 2 IC sockets. You can use masking tape to keep the sockets in place when you turn the board.
+* The sockets fit perfectly and there is no need to cut any extra "wires"
+
+image:img/step3a.standard.jpg[link="img/step3a.medium.jpg"]
+image:img/step3b.standard.jpg[link="img/step3b.medium.jpg"]
+image:img/step3c.standard.jpg[link="img/step3c.medium.jpg"]
+
+== Populate the reset switch ==
+
+* Insert the switch ('SW1') and solder it.
+* Orientation of the switch does not matter.
+
+NOTE: Note that you will have to force it a little bit to make it a tight fit. Also, it is normal to have a small space between the board and the switch.
+
+image:img/step4a.standard.jpg[link="img/step4a.medium.jpg"]
+
+== Populate the capacitors ==
+
+* Put 'C3' in place. 'C3' is the 220nF with 224 written on it. Polarity is not important for this component.
+* Put 'C2', 'C4', 'C5', 'C6' and 'C7'. These are all the same, and are 100nF with 104 written on it. Polarity is not important for these components.
+* 'C9' is the tantalum capacitor, and **the polarity IS important**. You have to match the side with the plus sign on the capacitor, with the plus sign on the PCB.
+
+WARNING: Tantalum capacitor will explode if the polarity is incorrect. Please double check.
+
+image:img/step5a.standard.jpg[link="img/step5a.medium.jpg"]
+image:img/step5b.standard.jpg[link="img/step5b.medium.jpg"]
+image:img/step5c.standard.jpg[link="img/step5c.medium.jpg"]
+
+== Populate the 5V regulator ==
+
+* Insert the 5V regulator ('U3'), and align the hole on the PCB with the hole on the component.
+* You can cut the extra leads
+
+image:img/step6a.standard.jpg[link="img/step6a.medium.jpg"]
+
+== Populate the electrolytic capacitors ==
+
+* Put the 2 electrolytic capacitors ('C1' and 'C8') in place. Bend them so they lie on the PCB as shown in the picture.
+* On the PCB there is a '+' sign, and one side of the capacitor has a stripe with a '-' sign. The '-' sign should be on the opposite side to the '+' sign.
+
+image:img/step7a.standard.jpg[link="img/step7a.medium.jpg"]
+image:img/step7b.standard.jpg[link="img/step7b.medium.jpg"]
+
+== Populate the 3.3V regulator ==
+
+* Insert the LM1700 3.3V regulator ('U4'). The marking on the PCB matches the shape of the component; so that the flat part of the regulator matches the straight line on the board.
+* You will have to bend the middle lead a little bit in order for it to fit.
+* You can cut the extra leads when done with soldering.
+
+image:img/step8a.standard.jpg[link="img/step8a.medium.jpg"]
+
+== Populate the LED ==
+
+* Put the LED ('D1') in place. The longer lead goes where the '+' marking is on the PCB.
+* You can cut the extra leads after soldering.
+
+image:img/step9a.standard.jpg[link="img/step9a.medium.jpg"]
+
+== Populate the male headers ==
+
+* Put the 1x6 **male header** ('P7') and 2x3 **male header** ('P5') in their holes and solder them. Masking tape can help to keep them in place.
+* Check the picture for the correct position. There is no orientation for headers.
+
+image:img/step10a.standard.jpg[link="img/step10a.medium.jpg]
+
+== Populate the female headers ==
+
+* Put the **female headers** ('P1', 'P2', 'P3', 'P4') in place. When you solder them, first solder just the 2 extremities.
+* After soldering the 2 outer pins of the 4 headers, check that the headers are perfectly perpendicular to the PCB. If not, simply heat one of the soldered pads and push the header flat to the PCB.
+
+NOTE: Having the header perfectly perpendicular will make it easy to add "Shields" to your board, otherwise adding a shield will require you to bend the leads
+
+image:img/step11a.standard.jpg[link="img/step11a.medium.jpg"]
+image:img/step11b.standard.jpg[link="img/step11b.medium.jpg"]
+
+== Populate the micro controllers ==
+
+* To insert the micro controller ('U1', 'U2'), you have to gently bend the pins so they are really straight. The best option is to slowly push the chip on one side, bending the pins on the table.
+* The micro controller has an orientation. Find the small dot and marking on one side, it should match with the marking on the PCB and the IC socket.
+
+image:img/step12a.standard.jpg[link="img/step12a.medium.jpg"]
+
+== Screw the 5V regulator to PCB ==
+
+* Screw the 5V regulator to the PCB using the M3 screw and nut.
+* The screw and nut are used to make a better contact with the board to dissipate heat. It is not used in the electronic circuit.
+
+image:img/step13a.standard.jpg[link="img/step13a.medium.jpg"]
+
+== Populate the mini-USB connector ==
+
+* Insert the mini-USB connector ('P8') and start soldering the 2 (or 4) leads of the connector shield.
+* Solder the 5 pins for the USB power and signal
+
+image:img/step14a.standard.jpg[link="img/step14a.medium.jpg"]
+
+== Solder the jumper/bridge on the back-side ==
+
+* Solder the jumper 'JP1'. Read the marking on the PCB to decide if powering should come from USB or Vin pin.
+* Solder jumper 'JP3' to have the auto-reset feature needed to program with the Arduino IDE:
+
+image:img/step15a.standard.jpg[link="img/step15a.medium.jpg"]
+image:img/step15b.standard.jpg[link="img/step15b.medium.jpg"]
+image:img/step15c.standard.jpg[link="img/step15c.medium.jpg"]
+
+//== Note ==
+//
+//[qanda]
+//.Q&A
+//Question 1::
+//    Answer 1
+//
+//Question 2:: 
+//    Answer 2
+//
+//CPU:: The brain of the computer.
+//Hard drive:: Permanent storage for operating system and/or user files.
+//RAM:: Temporarily stores information the CPU uses during operation.
+//Keyboard:: Used to enter text or control items on the screen.
+//Mouse:: Used to point to and select items on your computer screen.
+//Monitor:: Displays information in visual form using text and graphics.
