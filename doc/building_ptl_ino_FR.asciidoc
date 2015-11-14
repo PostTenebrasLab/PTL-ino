@@ -3,7 +3,7 @@
 //Generate HTML output with TOC on right side
 //asciidoc --backend html5 -a max-width=57em -a toc2 -a toc-title="List of steps" -a numbered building_ptl_ino_FR.asciidoc
 //
-//Generate HTML slides (slidy backedn)
+//Generate HTML slides (slidy backend)
 //asciidoc --backend slidy -a max-width=57em -a toc2 -a toc-title="List of steps" -a numbered building_ptl_ino_FR.asciidoc
 //
 
