@@ -1,0 +1,56 @@
+; Copyright 2015 Post Tenebras Lab
+
+[Strings]
+DriverPackageDisplayName="PTL USB Driver"
+ManufacturerName="Post Tenebras Lab (www.posttenebraslab.ch)"
+ServiceName="USB RS-232 Emulation Driver"
+PTLino.name="PTL-ino"
+
+[DefaultInstall]
+CopyINF=PTL-INO.inf
+
+[Version]
+Class=Ports
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
+Signature="$Windows NT$"
+Provider=%ManufacturerName%
+DriverPackageDisplayName=%DriverPackageDisplayName%
+DriverVer=01/05/2015,1.0.0.0
+
+[Manufacturer]
+%ManufacturerName%=DeviceList, NTamd64, NTia64
+
+[DestinationDirs]
+FakeModemCopyFileSection=12
+DefaultDestDir=12
+
+[DeviceList]
+%PTLino.name%=DriverInstall, USB\VID_04D8&PID_F331
+
+[DeviceList.NTamd64]
+%PTLino.name%=DriverInstall, USB\VID_04D8&PID_F331
+
+[DeviceList.NTia64]
+%PTLino.name%=DriverInstall, USB\VID_04D8&PID_F331
+
+[DriverInstall]
+include=mdmcpq.inf,usb.inf
+CopyFiles = FakeModemCopyFileSection
+AddReg=DriverAddReg
+
+[DriverAddReg]
+HKR,,DevLoader,,*ntkern 
+HKR,,NTMPDriver,,usbser.sys 
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[DriverInstall.Services]
+include=mdmcpq.inf
+AddService=usbser, 0x00000002, DriverService
+
+[DriverService]
+DisplayName=%ServiceName%
+ServiceType=1
+StartType=3
+ErrorControl=1
+ServiceBinary=%12%\usbser.sys
+LoadOrderGroup=Base
