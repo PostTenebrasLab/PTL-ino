@@ -7,4 +7,6 @@ You can find more general information at http://ptl-ino.com
 The current Kicad file were made with Kicad 4.0.2, so please upgrade to Kicad 4 if you haven't already.
 The Gerber file are there in case you simply want to order PCB directly to service like OSHPark or DirtyPCB.
 
+If you plan to sell board based on this design, you have to remove our logo from the PCB.
+
 PTL-ino board is licensed with Creative Common BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
