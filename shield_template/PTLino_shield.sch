@@ -1,0 +1,302 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:conn
+LIBS:PTLino_shield-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "PTLino Shield"
+Date "13 mars 2016"
+Rev "2.0"
+Comp "Post Tenebras Lab"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_01X10 P3
+U 1 1 550E0AFD
+P 9800 2200
+F 0 "P3" V 9750 2200 60  0000 C CNN
+F 1 "CONN_10" V 9850 2200 60  0000 C CNN
+F 2 "PTL-ino:SIL-10" H 9800 2200 60  0001 C CNN
+F 3 "" H 9800 2200 60  0000 C CNN
+	1    9800 2200
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_01X08 P4
+U 1 1 550EA8E5
+P 9800 3350
+F 0 "P4" V 9750 3350 60  0000 C CNN
+F 1 "CONN_8" V 9850 3350 60  0000 C CNN
+F 2 "PTL-ino:SIL-8" H 9800 3350 60  0001 C CNN
+F 3 "" H 9800 3350 60  0000 C CNN
+	1    9800 3350
+	1    0    0    1   
+$EndComp
+$Comp
+L CONN_01X06 P2
+U 1 1 550EA9C2
+P 1450 3200
+F 0 "P2" V 1400 3200 60  0000 C CNN
+F 1 "CONN_6" V 1500 3200 60  0000 C CNN
+F 2 "PTL-ino:SIL-6" H 1450 3200 60  0001 C CNN
+F 3 "" H 1450 3200 60  0000 C CNN
+	1    1450 3200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CONN_01X08 P1
+U 1 1 550EAA42
+P 1450 2400
+F 0 "P1" V 1400 2400 60  0000 C CNN
+F 1 "CONN_8" V 1500 2400 60  0000 C CNN
+F 2 "PTL-ino:SIL-8" H 1450 2400 60  0001 C CNN
+F 3 "" H 1450 2400 60  0000 C CNN
+	1    1450 2400
+	-1   0    0    -1  
+$EndComp
+Text Label 9400 3700 0    60   ~ 0
+0
+Text Label 9400 3600 0    60   ~ 0
+1
+Text Label 9400 3500 0    60   ~ 0
+2
+Text Label 9400 3400 0    60   ~ 0
+3
+Text Label 9400 3300 0    60   ~ 0
+4
+Text Label 9400 3200 0    60   ~ 0
+5
+Text Label 9400 3100 0    60   ~ 0
+6
+Text Label 9400 3000 0    60   ~ 0
+7
+Text Label 9400 2650 0    60   ~ 0
+8
+Text Label 9400 2550 0    60   ~ 0
+9
+Text Label 9400 2450 0    60   ~ 0
+10
+Text Label 9400 2350 0    60   ~ 0
+11
+Text Label 9400 2250 0    60   ~ 0
+12
+Text Label 9400 2150 0    60   ~ 0
+13
+Text Label 1950 3450 2    60   ~ 0
+A5
+Text Label 1950 3350 2    60   ~ 0
+A4
+Text Label 1950 3250 2    60   ~ 0
+A3
+Text Label 1950 3150 2    60   ~ 0
+A2
+Text Label 1950 3050 2    60   ~ 0
+A1
+Text Label 1950 2950 2    60   ~ 0
+A0
+Text Label 9400 1750 0    60   ~ 0
+19
+Text Label 9400 1850 0    60   ~ 0
+18
+$Comp
+L GND #PWR01
+U 1 1 550EEF7E
+P 1850 2550
+F 0 "#PWR01" H 1850 2550 30  0001 C CNN
+F 1 "GND" H 1850 2480 30  0001 C CNN
+F 2 "" H 1850 2550 60  0000 C CNN
+F 3 "" H 1850 2550 60  0000 C CNN
+	1    1850 2550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 550EEFAB
+P 1850 2650
+F 0 "#PWR02" H 1850 2650 30  0001 C CNN
+F 1 "GND" H 1850 2580 30  0001 C CNN
+F 2 "" H 1850 2650 60  0000 C CNN
+F 3 "" H 1850 2650 60  0000 C CNN
+	1    1850 2650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 550EEFD8
+P 9400 2050
+F 0 "#PWR03" H 9400 2050 30  0001 C CNN
+F 1 "GND" H 9400 1980 30  0001 C CNN
+F 2 "" H 9400 2050 60  0000 C CNN
+F 3 "" H 9400 2050 60  0000 C CNN
+	1    9400 2050
+	0    1    1    0   
+$EndComp
+Text Label 9400 1950 0    60   ~ 0
+AREF
+$Comp
+L +5V #PWR04
+U 1 1 550F0347
+P 1850 2450
+F 0 "#PWR04" H 1850 2540 20  0001 C CNN
+F 1 "+5V" V 1850 2650 30  0000 C CNN
+F 2 "" H 1850 2450 60  0000 C CNN
+F 3 "" H 1850 2450 60  0000 C CNN
+	1    1850 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L +3.3V #PWR05
+U 1 1 5518350A
+P 1850 2350
+F 0 "#PWR05" H 1850 2310 30  0001 C CNN
+F 1 "+3.3V" V 1850 2550 30  0000 C CNN
+F 2 "" H 1850 2350 60  0000 C CNN
+F 3 "" H 1850 2350 60  0000 C CNN
+	1    1850 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L +5V #PWR06
+U 1 1 551836E8
+P 1850 2150
+F 0 "#PWR06" H 1850 2240 20  0001 C CNN
+F 1 "+5V" V 1850 2350 30  0000 C CNN
+F 2 "" H 1850 2150 60  0000 C CNN
+F 3 "" H 1850 2150 60  0000 C CNN
+	1    1850 2150
+	0    1    1    0   
+$EndComp
+Text Label 1700 2250 0    60   ~ 0
+~RST
+Text Label 1700 2750 0    60   ~ 0
+VIN
+NoConn ~ 1650 2050
+$Comp
+L CONN_02X03 P5
+U 1 1 56F7ED00
+P 5600 6550
+F 0 "P5" H 5600 6750 50  0000 C CNN
+F 1 "CONN_02X03" H 5600 6350 50  0000 C CNN
+F 2 "PTL-ino:pin_array_3x2" H 5600 5350 50  0001 C CNN
+F 3 "" H 5600 5350 50  0000 C CNN
+	1    5600 6550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9400 1950 9600 1950
+Wire Wire Line
+	1650 2150 1850 2150
+Wire Wire Line
+	1650 2650 1850 2650
+Wire Wire Line
+	1650 2550 1850 2550
+Wire Wire Line
+	9600 2050 9400 2050
+Wire Wire Line
+	9600 1850 9400 1850
+Wire Wire Line
+	9600 1750 9400 1750
+Wire Wire Line
+	1650 2950 1950 2950
+Wire Wire Line
+	1650 3050 1950 3050
+Wire Wire Line
+	1650 3150 1950 3150
+Wire Wire Line
+	1650 3250 1950 3250
+Wire Wire Line
+	1650 3350 1950 3350
+Wire Wire Line
+	1650 3450 1950 3450
+Wire Wire Line
+	9600 2150 9400 2150
+Wire Wire Line
+	9600 2250 9400 2250
+Wire Wire Line
+	9600 2350 9400 2350
+Wire Wire Line
+	9600 2450 9400 2450
+Wire Wire Line
+	9600 2550 9400 2550
+Wire Wire Line
+	9600 2650 9400 2650
+Wire Wire Line
+	9600 3000 9400 3000
+Wire Wire Line
+	9600 3100 9400 3100
+Wire Wire Line
+	9600 3200 9400 3200
+Wire Wire Line
+	9600 3300 9400 3300
+Wire Wire Line
+	9600 3400 9400 3400
+Wire Wire Line
+	9600 3500 9400 3500
+Wire Wire Line
+	9600 3600 9400 3600
+Wire Wire Line
+	9600 3700 9400 3700
+Wire Wire Line
+	1650 2250 1950 2250
+Wire Wire Line
+	1850 2450 1650 2450
+Wire Wire Line
+	1850 2350 1650 2350
+Wire Wire Line
+	1650 2750 1950 2750
+Wire Wire Line
+	5700 5950 5700 6300
+Text Label 5700 6300 1    60   ~ 0
+MISO
+Wire Wire Line
+	5600 6300 5600 5950
+Wire Wire Line
+	5500 6300 5500 5950
+Wire Wire Line
+	5700 6800 5700 7100
+Wire Wire Line
+	5600 6800 5600 7200
+Wire Wire Line
+	5500 6800 5500 7100
+Text Label 5600 6300 1    60   ~ 0
+SCK
+Text Label 5500 6300 1    60   ~ 0
+~RST
+Text Label 5600 7000 1    60   ~ 0
+MOSI
+$Comp
+L +5V #PWR07
+U 1 1 56F7F00E
+P 5700 7100
+F 0 "#PWR07" H 5700 7190 20  0001 C CNN
+F 1 "+5V" V 5700 7250 30  0000 C CNN
+F 2 "" H 5700 7100 60  0000 C CNN
+F 3 "" H 5700 7100 60  0000 C CNN
+	1    5700 7100
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR08
+U 1 1 56F7F0B4
+P 5500 7100
+F 0 "#PWR08" H 5500 7100 30  0001 C CNN
+F 1 "GND" H 5500 7030 30  0001 C CNN
+F 2 "" H 5500 7100 60  0000 C CNN
+F 3 "" H 5500 7100 60  0000 C CNN
+	1    5500 7100
+	1    0    0    -1  
+$EndComp
+Text Label 5700 5950 3    60   ~ 0
+12
+Text Label 5600 6050 1    60   ~ 0
+13
+Text Label 5600 7150 1    60   ~ 0
+11
+$EndSCHEMATC
