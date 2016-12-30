@@ -1,6 +1,6 @@
-update=2016 March 13, Sunday 04:24:39
+update=Sat Dec 17 00:17:26 2016
 version=1
-last_client=kicad
+last_client=eeschema
 [general]
 version=1
 RootSch=
@@ -52,9 +52,10 @@ LabSize=60
 version=1
 LibDir=libs
 [eeschema/libraries]
-LibName1=power
-LibName2=device
-LibName3=ATmega328
-LibName4=PIC16F1455
-LibName5=conn
-LibName6=libs/7805
+LibName1=PTLino-rescue
+LibName2=power
+LibName3=device
+LibName4=ATmega328
+LibName5=PIC16F1455
+LibName6=conn
+LibName7=libs/7805
